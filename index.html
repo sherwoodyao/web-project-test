@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/vendor/swipe.css">
+
+    <!-- Demo styles -->
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+<input class="hidden" type="file" accept="image/*" onchange="picChange(event)"/>
+<div id="main">
+    <img class="drag-resize-img" src="" alt=""/>
+</div>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+    </div>
+</div>
+
+<!-- import jquery -->
+<script type="text/javascript" src="js/vendor/jquery.2.1.4.min.js"></script>
+
+<!-- template for the inner of swiper-wrapper dom -->
+<script id="swipertmpl" type="text/x-dot-template">
+    {{~it.array :value:index}}
+    <div class="swiper-slide">模版{{=index+1}}</div>
+    {{~}}
+</script>
+
+<!-- import dot:js template for nodejs and browser -->
+<script type="text/javascript" src="js/vendor/dot.min.js"></script>
+
+<!-- init the count of swiper list data -->
+<script src="js/config.js"></script>
+
+<!-- render the html with dot -->
+<script type="text/javascript" src="js/swiper-render.js"></script>
+
+<!-- import Swiper JS -->
+<script type="text/javascript" src="js/vendor/swipe.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script type="text/javascript" src="js/swiper-init.js"></script>
+
+<!-- dom operation -->
+<script type="text/javascript" src="js/dom-operation.js"></script>
+
+<!-- drag and resize img to adapter the img layout -->
+<!--<script type="text/javascript" src="js/vendor/interact.min.js"></script>-->
+
+<!--<script>-->
+    <!--interact('.drag-resize-img')-->
+            <!--.draggable({-->
+                <!--inertia: true-->
+            <!--})-->
+            <!--.resizable({-->
+                <!--inertia: true-->
+            <!--});-->
+<!--</script>-->
+</body>
+</html>
